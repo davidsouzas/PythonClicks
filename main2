@@ -1,0 +1,23 @@
+import turtle as t
+from pynput.keyboard import Key, Controller
+from pynput.mouse import Button, Listener
+keyboard = Controller()
+def click(x,y, button, pressed):
+    print(x,y,button,pressed)
+
+listener = Listener()
+
+def active():
+    keyboard.press(Key.cmd)
+    keyboard.release(Key.cmd)
+    return
+
+def getPos(x,y):
+    print("(", x, ",", y,")")
+    return
+
+def main():
+    t.onscreenclick(active())
+    t.mainloop()
+main()
+
